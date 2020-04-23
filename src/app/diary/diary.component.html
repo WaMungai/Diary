@@ -3,8 +3,9 @@
     <hr>
     <ul>
         <li *ngFor='let diary of diaries'>
-            {{goal.title}}
-            {{goal.description}}
+            {{diary.title}}
+            {{diary.description}}
+            <app-diary-detail [diary]='diary'></app-diary-detail>
         </li>
     </ul>
 </div>
