@@ -1,5 +1,8 @@
 export class Diary {
-    title:string;
-    description:string;
+    showDescription:boolean;
+    constructor(public title:string, public description:string){
+        this.showDescription=false;
+    }
+    
 
 }

@@ -2,10 +2,10 @@
     <h1>Dear Diary</h1>
     <hr>
     <ul>
-        <li *ngFor='let diary of diaries'>
-            {{diary.title}}
-            {{diary.description}}
-            <app-diary-detail [diary]='diary'></app-diary-detail>
-        </li>
+        <div *ngFor='let diary of diaries; let i = index'>
+            {{diary.title}} <br>
+            <button (click)='toggleDetails(i)'>Toggle Details</button>
+            <app-diary-detail *ngIf='diary.showDescription' [diary]='diary'></app-diary-detail>
+        </div>
     </ul>
 </div>
